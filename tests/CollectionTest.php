@@ -18,7 +18,6 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
             $this->collection = new \PPT\Collection();
         }
         $this->value = new \ArrayObject(array("name" => "Pippo",     "city" => "Topolinia"),  \ArrayObject::ARRAY_AS_PROPS);
-        //$this->assertTrue($this->collection instanceof \PPT\Collection);
     }
     
     

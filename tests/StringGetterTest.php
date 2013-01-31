@@ -11,17 +11,22 @@ use PPT\StringGetter;
  */
 class StringGetterTest extends \PHPUnit_Framework_TestCase
 {
+    protected $sg;
+    
+    public function setUp()
+    {
+        $this->sg = new StringGetter('piciu');
+    }
+    
     public function testGetString()
     {
-        $sg = new StringGetter('piciu');
-        $string = $sg->getString();
+        $string = $this->sg->getString();
         $this->assertEquals('piciu', $string);
     }
     
     public function testGetStringType()
     {
-        $sg = new StringGetter('piciu');
-        $string = $sg->getString();
+        $string = $this->sg->getString();
         $this->assertTrue(is_string($string));        
     }
 }
